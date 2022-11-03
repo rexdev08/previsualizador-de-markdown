@@ -9,14 +9,14 @@
   &__header {
     width: 100%;
     min-height: 35px;
-    background-color: #65a30d;
+    background-color: #0369a1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-inline: 1rem;
   }
-  &__span {
-  }
+  // &__span {
+  // }
   &__button {
     height: 100%;
     border: none;
@@ -28,6 +28,7 @@
     align-items: center;
 
     .button__expand {
+      display: none;
     }
     .button__compress {
       display: none;
@@ -41,7 +42,7 @@
   &__result {
     width: 100%;
     min-height: calc(300px - 35px);
-    background-color: #ecfccb;
+    background-color: #cffafe;
     border: none;
     padding: 1rem;
     // overflow: scroll;
