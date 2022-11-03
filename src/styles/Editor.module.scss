@@ -1,0 +1,54 @@
+.editor {
+  width: min(550px, 90%);
+  height: 200px;
+  min-height: 200px;
+  background-color:  #65a30d;
+  box-shadow: 7px 10px 16px 10px rgba(0, 0, 0, 0.272);
+//   border-radius: .3rem;
+  overflow: hidden;
+
+
+  &__header {
+    width: 100%;
+    min-height: 35px;
+    background-color:  #65a30d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1rem;
+  }
+  &__span {
+  }
+  &__button {
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.913);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .button__expand {
+    }
+    .button__compress {
+      display: none;
+    }
+  }
+  &__span {
+    font-size: clamp(12px, 10vw, 20px);
+    color: rgba(255, 255, 255, 0.913);
+    font-weight: 500;
+  }
+  &__text {
+    width: 100%;
+    max-width: 100%;
+    min-height: calc(100% - 35px);
+    border: none;
+    outline: none;
+    resize: none;
+    padding: .5rem;
+    background-color: #ecfccb;
+    margin: 0;
+  }
+}
