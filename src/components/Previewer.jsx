@@ -1,29 +1,29 @@
-import { marked } from "marked"
-import styles from "../styles/Previewer.module.scss"
-import {FaExpandArrowsAlt} from "react-icons/fa"
-import {FaCompressArrowsAlt} from "react-icons/fa"
+import { marked } from "marked";
+import styles from "../styles/Previewer.module.scss";
+import { FaExpandArrowsAlt } from "react-icons/fa";
+import { FaCompressArrowsAlt } from "react-icons/fa";
 
-
-
-const Previewer = ({elements}) => {
-
-    return (
-
-    <div id="preview" className={styles.preview}>
-    <header className={styles.preview__header}>
+const Previewer = ({ elements }) => {
+  return (
+    <div className={styles.preview}>
+      <header className={styles.preview__header}>
         <span className={styles.preview__span}>Previewer</span>
         <button className={styles.preview__button}>
-        <FaExpandArrowsAlt className={styles.button__expand}/>
-            <FaCompressArrowsAlt className={styles.button__compress}/>
+          <FaExpandArrowsAlt className={styles.button__expand} />
+          <FaCompressArrowsAlt className={styles.button__compress} />
         </button>
-    </header>
-    <div className={styles.preview__result} dangerouslySetInnerHTML={{__html: marked.parse(
-  elements.replace(/^[\u200B\u200C\u200D\u200E\u200F\uFEFF]/g,"").replace(/\n/g, "<br>")
-) }} />
+      </header>
+      <div
+        id="preview"
+        className={styles.preview__result}
+        dangerouslySetInnerHTML={{
+          __html: marked.parse(
+            elements.replace(/^[\u200B\u200C\u200D\u200E\u200F\uFEFF]/g, "")
+          ),
+        }}
+      />
     </div>
-    )
+  );
+};
 
-}
-
-
-export default Previewer
+export default Previewer;

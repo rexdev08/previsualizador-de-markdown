@@ -5,6 +5,12 @@
   box-shadow: 7px 10px 16px 10px rgba(0, 0, 0, 0.272);
   // border-radius: .3rem;
   // overflow: auto;
+  // line-height: 1.6;
+
+  p,
+  span {
+    margin-block: 1rem;
+  }
 
   &__header {
     width: 100%;
@@ -44,7 +50,7 @@
     min-height: calc(300px - 35px);
     background-color: #cffafe;
     border: none;
-    padding: 1rem;
+    padding: 2rem;
     // overflow: scroll;
     // display: flex;
     // flex-flow: column;
@@ -53,16 +59,15 @@
     font-size: clamp(10px, 10vw, 19px);
 
     img {
-        display: block;
+      display: block;
       max-width: 90%;
-    
+
       margin: 0 auto;
-      margin-inline: auto ;
+      margin-inline: auto;
     }
   }
 }
 
-
-.toggle{
+.toggle {
   display: none;
 }
